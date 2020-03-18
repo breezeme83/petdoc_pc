@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>콘텐츠홈_상담상세</title>
+    <link rel="stylesheet" type="text/css" href="css/services.css">
+    <link rel="stylesheet" type="text/css" href="css/customeal/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/live.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- 기존 헤더영역 -->
+        <div class="header">
+            <div class="header_inner">
+                <div class="header_inner_con">
+                    <h1 class="logo_title">
+                        <a href="#" class="common-gnb-logo">
+                            <span class="blind">pecdot로고 이미지</span>
+                        </a>
+                    </h1>
+                    <ul class="header_menu_list">
+                        <li class="list_item">
+                            <a href="#" class="menu_txt">홈</a>
+                        </li>
+                        <li class="list_item show">
+                            <a href="#" class="menu_txt">콘텐츠</a>
+                        </li>
+                        <li class="list_item">
+                            <a href="#" class="menu_txt">펫톡</a>
+                        </li>
+                    </ul>
+                    <div class="header_right_con">
+                        <div class="search_box">
+                            <button type="button" class="common-ic-input-search">
+                                <span class="blind">검색 버튼 이미지</span>
+                            </button>
+                            <input name="search" type="text" title="검색어 입력" class="input_text"
+                                placeholder="검색하실 내용을 입력해주세요." value="">
+                            <!-- [D] 많이 검색된 검색어 노출시 show 클래스 추가 -->
+                            <div class="keyword_layer ">
+                                <div class="section_info">
+                                    <strong class="section_tit">많이 검색된 검색어</strong>
+                                </div>
+                                <ul class="keyword_list">
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            고양이
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            강아지
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            구토
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            중성화
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            분리불안
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            설사
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            슬개골
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            케어
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            사료
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            눈
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            양치
+                                        </a>
+                                    </li>
+                                    <li class="list_item">
+                                        <a href="#" class="keyword">
+                                            피부
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- [D] 자동완성 레이어 노출시 show 클래스 추가 -->
+                            <ul class="autocomplet_list ">
+                                <li class="list_item">
+                                    <a href="#" class="autocomplet_keyword_area">
+                                        <strong class="point_txt">양치</strong>
+                                    </a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="#" class="autocomplet_keyword_area">
+                                        <strong class="point_txt">양치</strong>하는 방법
+                                    </a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="#" class="autocomplet_keyword_area">
+                                        고양이<strong class="point_txt">양치</strong>
+                                    </a>
+                                </li>
+                                <li class="list_item">
+                                    <a href="#" class="autocomplet_keyword_area">
+                                        강아지<strong class="point_txt">양치</strong>
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- [D] 로그인 시 show 클래스 추가 -->
+                        <div class="login_info ">
+                            <div class="login_button">
+                                <button type="button" class="btn_login">
+                                    <span>소셜 로그인</span>
+                                </button>
+                            </div>
+                            <div class="login_content">
+                                <button type="button" class="btn_login_txt">
+                                    <span class="user_name">집사 00000</span>
+                                    <span class="common-btn-ic-dropdown-mini-none">
+                                        <span class="blind">화살표 이미지</span>
+                                    </span>
+                                </button>
+                                <!-- [D] 유저네임 버튼 클릭시 show 클래스 추가 -->
+                                <div class="logout_layer ">
+                                    <button type="button" class="btn_logout">
+                                        <span class="btn_txt">로그아웃</span>
+                                        <span class="common-btn-ic-logout">
+                                            <span class="blind">로그아웃 아이콘 이미지</span>
+                                        </span>
+                                    </button>
+                                </div>
+                                <a href="#" class="login_txt">페이스북으로 로그인</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 기존 컨텐츠 영역 -->
+        <div class="container">
+            <div class="content">
+                <!-- 기존 컨텐츠 내부의 네비게이션 영역 -->
+                <div class="page_info">
+                    <ul class="page_info_list">
+                        <li class="list_item">
+                            <a href="#" class="menu_txt">홈</a>
+                        </li>
+                        <li class="list_item">
+                            <a href="#" class="menu_txt">콘텐츠</a>
+                        </li>
+                        <li class="list_item">
+                            <span class="menu_txt">상담</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="content_inner">
+                    <!--//커스터밀-->
+                    <div class="customeal">
+                        <div class="wrap-2-column">
+                        <div class="left-1-column">
+                            <div class="user-info">
+                                <p class="user-picture">
+                                    <img src="img/customeal/mypet.png" alt="">
+                                </p>
+                                <p class="user-name">
+                                    하나맘
+                                </p>
+                                <p class="user-lv">
+                                    LV1.그냥주이니
+                                </p>
+                            </div>
+                            <ul class="left-nav">
+                                <li><a href="#">반려동물 정보</a></li>
+                                <li><a href="#">북마크</a></li>
+                                <li><a href="#">펫 포인트</a></li>
+                                <li><a href="#">내 게시글</a></li>
+                                <li><a href="#">정보 변경</a></li>
+                            </ul>
+                        </div>
+                        <div class="right-2-column">
+                            <div class="wrap-2-column-content">
+                                <ul class="mypet-list">
+                                    <li>
+                                        <div class="pet-img-block">
+                                            <img src="img/customeal/common-img-profile-pet@3x.png" alt="">
+                                        </div>
+                                        <div class="pet-info-block">
+                                            <b class="name">나니</b>
+                                            <p class="age">나이<span>3세 1개월 (여아)</span></p>
+                                            <p class="breed">품종<span>터키시 앙고라</span></p>
+                                        </div>
+                                        <div class="pet-status-block">
+                                            <a href="#" class="btn-g-t">맞춤식 진단받기</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pet-img-block">
+                                            <img src="img/customeal/mypet.png" alt="">
+                                        </div>
+                                        <div class="pet-info-block">
+                                            <b class="name">달구</b>
+                                            <p class="age">나이<span>3세 8개월 (남아)</span></p>
+                                            <p class="breed">품종<span>포메라니안</span></p>
+                                        </div>
+                                        <div class="pet-status-block">
+                                            <span class="blue-assist-txt"><span class="txt-num">50%</span> 진행중</span>
+                                            <a href="#" class="btn-g-t">맞춤식 진단받기</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pet-img-block">
+                                            <img src="img/customeal/mypet.png" alt="">
+                                        </div>
+                                        <div class="pet-info-block">
+                                            <b class="name">하나</b>
+                                            <p class="age">나이<span>3세 8개월(남아)</span></p>
+                                            <p class="breed">품종<span>포메라니안</span></p>
+                                        </div>
+                                        <div class="pet-status-block">
+                                            <a href="#" class="btn-g-t">맞춤식 진단결과</a>
+                                            <a href="#" class="btn-g-b">맞춤식 구매하기</a>
+                                        </div>
+                                    </li>
+                                    <li class="update">
+                                        <div class="pet-img-block">
+                                            <img src="img/customeal/mypet.png" alt="">
+                                        </div>
+                                        <div class="pet-info-block">
+                                            <b class="name">라떼</b>
+                                            <p class="age">나이<span>3세 8개월(남아)</span></p>
+                                            <p class="breed">품종<span>포메라니안</span></p>
+                                        </div>
+                                        <div class="pet-status-block">
+                                            <span class="blue-assist-txt"><span class="txt-num">NEW</span></span>
+                                            <a href="#" class="btn-g-t">맞춤식 진단결과</a>
+                                            <a href="#" class="btn-g-b">맞춤식 구매하기</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="pet-img-block">
+                                            <img src="img/customeal/mypet.png" alt="">
+                                        </div>
+                                        <div class="pet-info-block">
+                                            <b class="name">동동이</b>
+                                            <p class="ongoing">반려동물 등록</p>
+                                        </div>
+                                        <div class="pet-status-block">
+                                            <span class="blue-assist-txt"><span class="txt-num">50%</span> 진행중</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="wrap-btn-global btn-blue w300 btn-deep-blue">
+                                    <input type="button" title="name" alt="추가하기" value="추가하기" class="btn-global" id="">
+                                </div>
+                                <!--리스트가 없을때 아래 버튼만 노출-->
+                                <!-- <div class="wrap-btn-global btn-blue w300 no-list">
+                                    <p class="notice-msg">아직 등록된 반려동물이 없습니다.</p>
+                                    <input type="button" title="name" alt="추가하기" value="추가하기" class="btn-global" id="">
+                                </div> -->
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <!--커스터밀//-->
+                </div>
+            </div>
+        </div>
+        <!-- 기존 푸터 영역 -->
+        <div class="footer">
+            <div class="footer_inner">
+                <a href="#" class="common-footer-img-logo">
+                    <span class="blind">푸터 petdoc 로고 이미지</span>
+                </a>
+                <ul class="menu_list">
+                    <li class="list_item">
+                        <a href="#">회사소개</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#">이용약관</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#">개인정보 처리방침</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#">브이랩</a>
+                    </li>
+                    <li class="list_item">
+                        <a href="#">브이케어</a>
+                    </li>
+
+                </ul>
+                <dl class="company_info">
+                    <dt class="company_info_words">
+                        <span class="blind">회사명</span>
+                    </dt>
+                    <dd class="company_info_content">
+                        (주) 펫닥
+                    </dd>
+                    <dt class="company_info_words">
+                        사업자등록번호 :
+                    </dt>
+                    <dd class="company_info_content">
+                        276 - 81 - 00265
+                    </dd>
+                    <dt class="company_info_words">
+                        대표이사 :
+                    </dt>
+                    <dd class="company_info_content">
+                        최승용
+                    </dd>
+                    <dt class="company_info_words">
+                        개인정보관리책임자 :
+                    </dt>
+                    <dd class="company_info_content">
+                        박정기
+                    </dd>
+                    <dt class="company_info_words">
+                        <span class="blind">회사 주소</span>
+                    </dt>
+                    <dd class="company_info_content">
+                        서울특별시 서초구 강남대로 79길 32 3층 펫닥
+                    </dd>
+                    <dt class="company_info_words">
+                        <span class="blind">회사 전화번호 및 업무시간</span>
+                    </dt>
+                    <dd class="company_info_content">
+                        Tel : 02.6949.3016 월-금 (10:00 - 19:00 )
+                    </dd>
+                    <dt class="company_info_words">
+                        Email :
+                    </dt>
+                    <dd class="company_info_content">
+                        hello@petdoc.co.kr
+                    </dd>
+                    <dt class="company_info_words">
+                        <span class="blind">회사 copyright 문구</span>
+                    </dt>
+                    <dd class="company_info_content">
+                        © 2019 PetDoc Inc. All Rights Reserved.
+                    </dd>
+                </dl>
+                <ul class="social_list">
+                    <li class="list_item">
+                        <a href="https://www.instagram.com/hello_petdoc/?hl=ko" target="_blank"
+                            class="common-footer-btn-instagram">
+                            <span class="blind">인스타그램 아이콘 이미지</span>
+                        </a>
+                    </li>
+                    <li class="list_item">
+                        <a href="https://www.youtube.com/channel/UCDJ5mikV_sfAvD8n_ZFiTvQ" target="_blank"
+                            class="common-footer-btn-youtube">
+                            <span class="blind">유튜브 아이콘 이미지</span>
+                        </a>
+                    </li>
+                    <li class="list_item">
+                        <a href="https://www.facebook.com/petdoc1" target="_blank" class="common-footer-btn-facebook">
+                            <span class="blind">페이스북 아이콘 이미지</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="social_list store">
+                    <li class="list_item">
+                        <a href="https://apps.apple.com/kr/app/펫닥-내-손안에-수의사-소환-실시간-수의사-상담-앱/id1059558618"
+                            target="_blank" class="common-footer-btn-appstore">
+                            <span class="blind">App 스토어 이미지</span>
+                        </a>
+                    </li>
+                    <li class="list_item">
+                        <a href="https://play.google.com/store/apps/details?id=kr.co.petdoc.petdoc&hl=ko"
+                            target="_blank" class="common-footer-btn-playstore">
+                            <span class="blind">구글 플레이 스토어 이미지</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="family_site_box">
+                    <button type="button" class="btn_site">
+                        <span class="btn_txt">패밀리 사이트</span>
+                        <span class="common-ic-more-small">
+                            <span class="blind">패밀리 사이트 이동 아이콘 이미지</span>
+                        </span>
+                    </button>
+                    <!-- [D] 패밀리 사이트 레이어 노출 시 show 클래스 추가 -->
+                    <ul class="family_site_layer">
+                        <li class="list_item">
+                            <a href="#" class="menu_txt">펫닥</a>
+                        </li>
+                        <li class="list_item">
+                            <a href="#" class="menu_txt">브이랩</a>
+                        </li>
+                        <li class="list_item">
+                            <a href="#" class="menu_txt">브이케어</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
