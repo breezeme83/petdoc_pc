@@ -14,10 +14,24 @@
             margin: 5px;
             border: solid 1px
         }
-        .b-1-block{position:relative;width:300px;min-height:80px;}
-        h2{padding:20px;}
-        .wrap-fixed-button{z-index:10;}
-        .wrap-fixed-button:nth-child(2){bottom:52px !important;}
+
+        .b-1-block {
+            position: relative;
+            width: 300px;
+            min-height: 80px;
+        }
+
+        h2 {
+            padding: 20px;
+        }
+
+        .wrap-fixed-button {
+            z-index: 10;
+        }
+
+        .wrap-fixed-button:nth-child(2) {
+            bottom: 52px !important;
+        }
     </style>
 </head>
 
@@ -26,74 +40,96 @@
         <h2>진단</h2>
         <div class="b-1-block">
             <div class="wrap-btn-global btn-blue">
-                <input type="submit" title="name" alt="다음" value="다음" class="btn-global" id="">
+                <button type="submit" class="btn-global">
+                    <span>다음</span>
+                </button>
             </div>
         </div>
         <div class="b-1-block">
             <div class="wrap-btn-global btn-blue">
-                <input type="submit" title="name" alt="다음" value="다음" class="btn-global active" id="">
+                <button type="submit" class="btn-global active">
+                    <span>다음</span>
+                </button>
             </div>
         </div>
         <div class="b-1-block">
             <div class="wrap-btn-global btn-l-red">
-                <input type="submit" title="name" alt="다음" value="다음" class="btn-global active last-form" id="">
+                <button type="submit" class="btn-global active last-form">
+                    <span>진단결과 보러가기</span>
+                </button>
             </div>
         </div>
         <h2>등록</h2>
         <div class="b-1-block">
             <div class="wrap-btn-global btn-red">
-                <input type="submit" title="name" alt="반려동물이름제출" value="다음" class="btn-global">
+                <button type="submit" class="btn-global">
+                    <span>다음</span>
+                </button>
             </div>
         </div>
         <div class="b-1-block">
             <div class="wrap-btn-global btn-red">
-                <input type="submit" title="name" alt="반려동물이름제출" value="다음" class="btn-global active">
+                <button type="submit" class="btn-global active">
+                    <span>다음</span>
+                </button>
             </div>
         </div>
         <div class="b-1-block">
             <div class="wrap-btn-global btn-red">
-                <input type="submit" title="name" alt="반려동물이름제출" value="다음" class="btn-global active last-form">
+                <button type="submit" class="btn-global active last-form">
+                    <span>반려동물 등록 완료</span>
+                </button>
             </div>
         </div>
-        <h2>결과</h2>
+        <h2>결과</h2>`
         <div class="b-1-block" style="z-index:100">
             &nbsp;&nbsp;&nbsp;화면 아래에
             <div class="wrap-fixed-button wrap-btn-global btn-l-red">
-                <button type="button" class="btn-global active last-form">맞춤식 구매하기</button>
+                <button type="button" class="btn-global active last-form"><span>맞춤식 구매하기</span></button>
             </div>
             <div class="wrap-fixed-button">
                 <div class="wrap-btn-left">
-                    <button class="btn-left-blue">맞춤식 구매하기</button>
+                    <button type="button" class="btn-left-blue"><span>맞춤식 구매하기</span></button>
                 </div>
                 <div class="wrap-btn-right wrap-btn-global btn-l-red">
-                    <button class="btn-global active last-form">맞춤식 구매하기</button>
+                    <button type="button" class="btn-global active last-form"><span>맞춤식 구매하기</span></button>
                 </div>
             </div>
         </div>
         <h2>게시판</h2>
         <div class="b-1-block">
-        <div class="wrap-btn-global btn-blue w300 btn-deep-blue">
-            <input type="button" title="name" alt="추가하기" value="추가하기" class="btn-global" id="">
-        </div>
+            <div class="wrap-btn-global btn-blue w300 btn-deep-blue">
+                <button type="button" class="btn-global">
+                    <span>추가하기</span>
+                </button>
+            </div>
         </div>
         <h2>반려동물정보/내 정보 수정</h2>
         <div class="b-1-block">
             <div class="wrap-btn-global btn-red w300">
-                <input type="submit" title="" alt="기초 반려동물 정보 저장" value="기초 반려동물 정보 저장" class="btn-global" id="">
+                <button type="submit" class="btn-global">
+                    <span>기초 반려동물 정보 저장</span>
+                </button>
+
             </div>
             <div class="wrap-btn-global btn-red w300">
-                <input type="submit" title="" alt="기초 반려동물 정보 저장" value="기초 반려동물 정보 저장" class="btn-global last-form active"
-                    id="">
+                <button type="submit" class="btn-global last-form active">
+                    <span>기초 반려동물 정보 저장</span>
+                </button>
             </div>
         </div>
 
         <h2>탈퇴하기</h2>
         <div class="b-1-block">
             <div class="wrap-btn-global btn-red-edit">
-                <input type="submit" title="name" alt="탈퇴하기" value="탈퇴하기" class="btn-global">
+                <button type="submit" class="btn-global">
+                    <span>탈퇴하기</span>
+                </button>
             </div>
             <div class="wrap-btn-global btn-red-edit">
-                <input type="submit" title="name" alt="탈퇴하기" value="탈퇴하기" class="btn-global active">
+                <button type="submit" class="btn-global active">
+                    <span>탈퇴하기</span>
+                </button>
             </div>
         </div>
     </div>

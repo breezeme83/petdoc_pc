@@ -169,20 +169,6 @@
         <!-- 기존 컨텐츠 영역 -->
         <div class="container">
             <div class="content">
-                <!-- 기존 컨텐츠 내부의 네비게이션 영역 -->
-                <div class="page_info">
-                    <ul class="page_info_list">
-                        <li class="list_item">
-                            <a href="#" class="menu_txt">홈</a>
-                        </li>
-                        <li class="list_item">
-                            <a href="#" class="menu_txt">콘텐츠</a>
-                        </li>
-                        <li class="list_item">
-                            <span class="menu_txt">상담</span>
-                        </li>
-                    </ul>
-                </div>
                 <div class="content_inner">
                     <!--//커스터밀-->
                     <div class="customeal">
@@ -206,8 +192,8 @@
                                                 <li>
                                                     <div class="radio-label">
                                                         <label>
-                                                            <input type="radio" name="breed" class="select-breed"
-                                                                value="known">
+                                                            <input type="radio" name="breed" class="toggle-trigger"
+                                                            data-toggle-index="0" checked>
                                                             <span class="radio-circle">
                                                                 <span class="circle"></span>
                                                             </span>
@@ -220,8 +206,9 @@
                                                 <li>
                                                     <div class="radio-label">
                                                         <label>
-                                                            <input type="radio" name="breed" class="select-breed not"
-                                                                value="unknown">
+                                                            <input type="radio" name="breed" class="toggle-trigger no-block"
+                                                            data-toggle-index="1"
+                                                               >
                                                             <span class="radio-circle">
                                                                 <span class="circle"></span>
                                                             </span>
@@ -232,28 +219,29 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <span class="wrap-txt-input">
-                                                <input class="input-name breed" type="text" placeholder="품종을 검색해 주세요">
-                                            </span>
-                                            <!--검색 결과-->
-                                            <div class="wrap-breedtype-list">
-                                                <ul class="breedtype-list">
-                                                    <li><span class="matchingtext">강</span>아지</li>
-                                                    <li>고양이</li>
-                                                    <li>멍멍이</li>
-                                                    <li>거북이</li>
-                                                    <li>거북이</li>
-                                                </ul>
+                                            <div class="toggle-block active">
+                                                <span class="wrap-txt-input">
+                                                    <input class="input-name breed" type="text" placeholder="품종을 검색해 주세요">
+                                                </span>
+                                                <!--검색 결과-->
+                                                <div class="wrap-breedtype-list">
+                                                    <ul class="breedtype-list">
+                                                        <li><span class="matchingtext">강</span>아지</li>
+                                                        <li>고양이</li>
+                                                        <li>멍멍이</li>
+                                                        <li>거북이</li>
+                                                        <li>거북이</li>
+                                                    </ul>
+                                                </div>
+                                                <!--검색 결과 없음-->
+                                                <!-- <div class="no-result"><p>검색결과가 없습니다.</p></div> -->
                                             </div>
-                                            <!--검색 결과 없음-->
-                                            <!-- <div class="no-result">
-                                           <p>검색결과가 없습니다.</p>
-                                        </div> -->
-                                        </div>
-                                        <div class="wrap-btn-global btn-red">
-                                            <input type="submit" title="name" alt="반려동물품종제출" value="다음"
-                                                class="btn-global" id="">
-                                        </div>
+                                            </div>
+                                            <div class="wrap-btn-global btn-red">
+                                                <button type="submit" class="btn-global">
+                                                    <span>다음</span>
+                                                </button>
+                                            </div>
                                     </fieldset>
                                 </form>
                                 <p class="wrap-btn-back"><a class="btn-back" href="#">이전 페이지</a></p>

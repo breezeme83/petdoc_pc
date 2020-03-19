@@ -9,7 +9,7 @@ $(document).ready(function () {
         function updateSuffix() {
             var textWidth = getTextWidth(inputElement.value, '15px arial');
             console.log(textWidth);
-            textWidth == 0 ? suffixElement.style.color = "#bcc1c8" : suffixElement.style.color = "#4e5263"
+            textWidth == 0 ? suffixElement.style.color = "#bcc1c8" : suffixElement.style.color = "#4e5263";
             suffixElement.style.left = textWidth + 'px';
         }
 
@@ -60,7 +60,7 @@ $(document).ready(function () {
             $(this).parents('.wrap-radio-label').siblings('.toggle-block').removeClass('active');
         }
     });
-    //secession.html/////////////////////////여기!!!!!!!!!!!!////////////////////////////////
+    //secession.html
     $('input.toggle-detail').change(function () {
         var index = $(this).data("toggle-index");
         var checked = $(this).is(":checked");
@@ -76,7 +76,7 @@ $(document).ready(function () {
             }
         }
     });
-    //secession.html/////////////////////////////////////////////////////////
+    //secession.html
     //entrance.html
     //center
     var contentHeight = $(window).height() - $('.header').height();
@@ -92,7 +92,7 @@ $(document).ready(function () {
     //exerciseHours_form
     function countHours(hour) {
         currentNumber = parseInt($('.input-exercise-block .input-exercise').val()) + hour;
-        if (Number.isNaN(currentNumber)) {
+        if (isNaN(currentNumber)) {
             currentNumber = 0;
         }
         else if (currentNumber < 0) {
@@ -114,7 +114,6 @@ $(document).ready(function () {
         countHours(-1);
         e.preventDefault();
     });
-
     //real-time-loading.html
     $('#percent').on('change', function () {
         //서버전송량
@@ -211,6 +210,57 @@ $(document).ready(function () {
             $(".swiper-pagination").css("display", "none");
         }
     }
-    ///////////////////////////////////////////////////////////
+});
+
+//캘린더/////////////////////////////////////////////////////////
+//point.html
+$(function(){
+    if(window.Pikaday === undefined) {
+        return;
+    }    
+    function addDays(date, days) {
+        var d = new Date(date.valueOf());
+        d.setDate(d.getDate() + days);
+        return d;
+    }
+    var pickadayConfig = {
+        toString: function(date) {
+            var day = date.getDate();
+            var month = date.getMonth() + 1;
+            var year = date.getFullYear();
+            return year + (month < 10 ? '.0' : '.') + month + (day < 10 ? '.0' : '.') + day;
+        },
+        i18n: {
+            previousMonth : '',
+            nextMonth     : '',
+            months        : ['1','2','3','4','5','6','7','8','9','10','11','12'],
+            weekdays      : ['일','월','화','수','목','금','토'],
+            weekdaysShort : ['일','월','화','수','목','금','토']
+        },
+        yearSuffix: '.',
+        setDefaultDate: true,
+        position: 'bottom center',
+        showMonthAfterYear: true
+    };
+    var sDatePicker = new Pikaday($.extend(
+        {
+            field: $('#sdate')[0],
+            defaultDate: addDays(new Date(), -30),
+            onSelect: function(date) {
+                console.log('start date selected', date);
+            }
+        }, 
+        pickadayConfig
+    ));
+    var eDatePicker = new Pikaday($.extend(
+        {
+            field: $('#edate')[0],
+            defaultDate: new Date(),
+            onSelect: function(date) {
+                console.log('end date selected', date);
+            }
+        }, 
+        pickadayConfig
+    ));
 });
 

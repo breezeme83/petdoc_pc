@@ -6,8 +6,7 @@
     <title>콘텐츠홈_상담상세</title>
     <link rel="stylesheet" type="text/css" href="css/services.css">
     <link rel="stylesheet" type="text/css" href="css/customeal/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,700&display=swap&subset=korean" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <script src="js/jquery.min.js"></script>
     <script src="js/live.js"></script>
@@ -169,20 +168,6 @@
         <!-- 기존 컨텐츠 영역 -->
         <div class="container">
             <div class="content">
-                <!-- 기존 컨텐츠 내부의 네비게이션 영역 -->
-                <div class="page_info">
-                    <ul class="page_info_list">
-                        <li class="list_item">
-                            <a href="#" class="menu_txt">홈</a>
-                        </li>
-                        <li class="list_item">
-                            <a href="#" class="menu_txt">콘텐츠</a>
-                        </li>
-                        <li class="list_item">
-                            <span class="menu_txt">상담</span>
-                        </li>
-                    </ul>
-                </div>
                 <div class="content_inner">
                     <!--//커스터밀-->
                     <div class="customeal">
@@ -201,12 +186,14 @@
                                         <legend class="blind">name</legend>
                                         <!--반려동물사진-->
                                         <div class="picture-block">
-                                            <a href="#" class="wrap-picture">
+                                            <div class="wrap-picture">
                                                 <span class="clip-picture">
                                                     <!-- <img src="img/customeal/mypet.png" alt="내사진"> -->
                                                 </span>
-                                                <input type="file" class="custom-file-input">
-                                            </a>
+                                                <div class="clip-input-file">
+                                                    <input type="file" class="custom-file-input">
+                                                </div>
+                                            </div>
                                             <!-- <p class="name-block">나니</p> -->
                                             <a href="#" class="sub-text">프로필 사진(선택)</a>
                                         </div>
@@ -220,8 +207,9 @@
                                             <p class="error-msg">반려동물의 이름을 입력해 주세요</p>
                                         </div>
                                         <div class="wrap-btn-global btn-red">
-                                            <input type="submit" title="name" alt="반려동물이름제출" value="다음"
-                                                class="btn-global">
+                                            <button type="submit" class="btn-global">
+                                                <span>다음</span>
+                                            </button>
                                         </div>
                                     </fieldset>
                                 </form>

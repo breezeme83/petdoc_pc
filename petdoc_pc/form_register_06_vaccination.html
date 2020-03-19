@@ -169,20 +169,6 @@
         <!-- 기존 컨텐츠 영역 -->
         <div class="container">
             <div class="content">
-                <!-- 기존 컨텐츠 내부의 네비게이션 영역 -->
-                <div class="page_info">
-                    <ul class="page_info_list">
-                        <li class="list_item">
-                            <a href="#" class="menu_txt">홈</a>
-                        </li>
-                        <li class="list_item">
-                            <a href="#" class="menu_txt">콘텐츠</a>
-                        </li>
-                        <li class="list_item">
-                            <span class="menu_txt">상담</span>
-                        </li>
-                    </ul>
-                </div>
                 <div class="content_inner">
                     <!--//커스터밀-->
                     <div class="customeal">
@@ -196,7 +182,7 @@
                                     <!--진행바 길이 클래스 r-1-6 = 1/6 | r-1-6 = 2/6 .....-->
                                     <span class="progress-status-bar r-1-6"></span>
                                 </div>
-                                <form id="vaccination" name="vaccination" target="_top" action="" method="POST">
+                                <form id="vaccination" name="vaccination" target="_top" action="" method="post">
                                     <input type="hidden" name="vaccination-hidden" id="value-hidden" value="" class="required-input">
                                     <fieldset class="vaccination-form">
                                         <legend class="blind">vaccination</legend>
@@ -204,14 +190,16 @@
                                         <div class="input-vaccination-block">
                                             <b class="txt-quiry">하나의 예방접종 여부를 선택해주세요.</b>
                                             <ul class="check-type v-list activeToggle">
-                                                <li data-type="접종전">접종 전</li>
+                                                <li class="active" data-type="접종전">접종 전</li>
                                                 <li data-type="접종중">접종 중</li>
                                                 <li data-type="접종후">접종 후</li>
                                                 <li data-type="모름">모름</li>
                                             </ul>
                                         </div>
                                         <div class="wrap-btn-global btn-red">
-                                            <input type="submit" title="name" alt="반려동물 등록 완료" value="반려동물 등록 완료" class="btn-global last-form" id="">
+                                            <button type="submit"  class="btn-global last-form active">
+                                                <span>반려동물 등록 완료</span>
+                                            </button>
                                         </div>
                                     </fieldset>
                                 </form>
