@@ -7,7 +7,7 @@ $(document).ready(function () {
         inputElement.addEventListener('input', updateSuffix);
         updateSuffix();
         function updateSuffix() {
-            var textWidth = getTextWidth(inputElement.value, '15px arial');
+            var textWidth = getTextWidth(inputElement.value, '15px Roboto');
             console.log(textWidth);
             textWidth == 0 ? suffixElement.style.color = "#bcc1c8" : suffixElement.style.color = "#4e5263";
             suffixElement.style.left = textWidth + 'px';
@@ -162,12 +162,12 @@ $(document).ready(function () {
         $('#cycle_age').petCycle({
             petCurrent: petMonth,
             levels: [{ name: '성장기', min: 0, max: 11 }, { name: '성년기', min: 12, max: 95 }, { name: '노년기', min: 96, max: 150 }],
-            title: parseInt((petMonth / 12)) + '세' + (petMonth % 12) + '개월'
+            title: '<span class="txt-roboto">'+parseInt((petMonth / 12)) +'</span>'+ '세 ' + '<span class="txt-roboto">' + (petMonth % 12) +'</span>'+ '개월'
         });
         $('#cycle_weight').petCycle({
             petCurrent: 8.8,
             levels: [{ name: '외소', min: 0, max: 7 }, { name: '표준', min: 7.1, max: 9 }, { name: '비만', min: 10, max: 30 }],
-            title: '8.8kg'
+            title: '<span class="txt-roboto">'+ '8.8kg'+'</span>'
         });
     }
     //result.html
@@ -242,12 +242,16 @@ $(function(){
         position: 'bottom center',
         showMonthAfterYear: true
     };
+    $('#sdate').text(pickadayConfig.toString(addDays(new Date(), -30)));
+    $('#edate').text(pickadayConfig.toString(new Date(), -30));
     var sDatePicker = new Pikaday($.extend(
         {
             field: $('#sdate')[0],
             defaultDate: addDays(new Date(), -30),
             onSelect: function(date) {
+                $('#sdate').text(pickadayConfig.toString(date));
                 console.log('start date selected', date);
+
             }
         }, 
         pickadayConfig
@@ -257,6 +261,7 @@ $(function(){
             field: $('#edate')[0],
             defaultDate: new Date(),
             onSelect: function(date) {
+                $('#edate').text(pickadayConfig.toString(date));
                 console.log('end date selected', date);
             }
         }, 

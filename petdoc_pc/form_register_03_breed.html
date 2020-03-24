@@ -183,6 +183,7 @@
                                     <span class="progress-status-bar r-1-6"></span>
                                 </div>
                                 <form id="breed" name="breed" target="_top" action="" method="post">
+                                    <input type="hidden" name="breed-hidden" id="value-hidden">
                                     <fieldset class="breed-form">
                                         <legend class="blind">품종</legend>
                                         <!--반려동물품종-->
@@ -193,7 +194,7 @@
                                                     <div class="radio-label">
                                                         <label>
                                                             <input type="radio" name="breed" class="toggle-trigger"
-                                                            data-toggle-index="0" checked>
+                                                                data-toggle-index="0" checked>
                                                             <span class="radio-circle">
                                                                 <span class="circle"></span>
                                                             </span>
@@ -206,9 +207,8 @@
                                                 <li>
                                                     <div class="radio-label">
                                                         <label>
-                                                            <input type="radio" name="breed" class="toggle-trigger no-block"
-                                                            data-toggle-index="1"
-                                                               >
+                                                            <input type="radio" name="breed" class="toggle-trigger"
+                                                                data-toggle-index="1">
                                                             <span class="radio-circle">
                                                                 <span class="circle"></span>
                                                             </span>
@@ -221,7 +221,8 @@
                                             </ul>
                                             <div class="toggle-block active">
                                                 <span class="wrap-txt-input">
-                                                    <input class="input-name breed" type="text" placeholder="품종을 검색해 주세요">
+                                                    <input class="input-name breed" type="text"
+                                                        placeholder="품종을 검색해 주세요">
                                                 </span>
                                                 <!--검색 결과-->
                                                 <div class="wrap-breedtype-list">
@@ -236,12 +237,20 @@
                                                 <!--검색 결과 없음-->
                                                 <!-- <div class="no-result"><p>검색결과가 없습니다.</p></div> -->
                                             </div>
+                                            <div class="toggle-block">
+                                                <ul class="check-type v-list activeToggle">
+                                                    <li class="active" data-type="소형">소형 <span class="txt-roboto">0~10kg</span></li>
+                                                    <li data-type="중형">중형 <span class="txt-roboto">10~25kg</span></li>
+                                                    <li data-type="대형">대형 <span class="txt-roboto">25kg</span> 이상</li>
+                                                </ul>
+                                                <div class="info-box">하나의 크기는 어느정도 인가요? 하나가 아직 성장기라면 다 자란 후의 예상 크기를 선택해주세요.</div>
                                             </div>
-                                            <div class="wrap-btn-global btn-red">
-                                                <button type="submit" class="btn-global">
-                                                    <span>다음</span>
-                                                </button>
-                                            </div>
+                                        </div>
+                                        <div class="wrap-btn-global btn-red">
+                                            <button type="submit" class="btn-global">
+                                                <span>다음</span>
+                                            </button>
+                                        </div>
                                     </fieldset>
                                 </form>
                                 <p class="wrap-btn-back"><a class="btn-back" href="#">이전 페이지</a></p>
